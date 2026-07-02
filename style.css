@@ -46,10 +46,7 @@ body {
 /* ===== DESKTOP BACKGROUND ===== */
 #desktop-bg {
   position: fixed; inset: 0; z-index: 0;
-  background:
-    radial-gradient(ellipse 90% 70% at 30% 80%,  rgba(58,1,92,0.18)  0%, transparent 65%),
-    radial-gradient(ellipse 60% 50% at 80% 20%,  rgba(5,217,232,0.06) 0%, transparent 60%),
-    linear-gradient(160deg, #131316 0%, #0d0a14 100%);
+  background: url('/wallpaper.jpeg') center center / cover no-repeat;
 }
 
 /* ===== CRT OVERLAY — subtle ===== */
