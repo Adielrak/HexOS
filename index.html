@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HEXOS // TERMINAL</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Phosphor desktop background -->
+  <div id="desktop-bg"></div>
+
+  <!-- CRT overlay -->
+  <div id="crt-overlay"></div>
+
+  <!-- Matrix rain screensaver -->
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- Boot screen -->
+  <div id="boot-screen">
+    <div id="boot-text"></div>
+  </div>
+
+  <!-- Desktop -->
+  <div id="desktop">
+
+    <!-- Taskbar (top) -->
+    <div id="taskbar">
+      <span id="taskbar-logo">HEXOS</span>
+      <div id="taskbar-divider"></div>
+
+      <!-- Open window pills -->
+      <div id="taskbar-windows"></div>
+
+      <!-- Right: fake metrics + clock -->
+      <div id="taskbar-metrics">
+        <span>
+          <span class="metric-label">CPU</span>
+          <span class="metric-bar"><span class="metric-fill" id="metric-cpu-fill" style="width:18%"></span></span>
+          <span class="metric-value" id="metric-cpu-val">18%</span>
+        </span>
+        <span>
+          <span class="metric-label">NET</span>
+          <span class="metric-bar"><span class="metric-fill" id="metric-net-fill" style="width:32%"></span></span>
+          <span class="metric-value" id="metric-net-val">42KB/s</span>
+        </span>
+        <span class="dim" style="font-size:10px">shadow-rig-7749</span>
+      </div>
+
+      <span id="taskbar-time"></span>
+    </div>
+
+    <!-- Window container -->
+    <div id="window-container">
+
+      <!-- App Dock -->
+      <div id="dock">
+        <div class="dock-icon" data-app="welcome">
+          <div class="dock-glyph"><i class="fa-solid fa-terminal"></i></div>
+          <span class="dock-label">HOME</span>
+        </div>
+        <div class="dock-icon" data-app="calc">
+          <div class="dock-glyph"><i class="fa-solid fa-calculator"></i></div>
+          <span class="dock-label">CALC</span>
+        </div>
+        <div class="dock-icon" data-app="music">
+          <div class="dock-glyph"><i class="fa-solid fa-headphones"></i></div>
+          <span class="dock-label">MUSIC</span>
+        </div>
+        <div class="dock-icon" data-app="snake">
+          <div class="dock-glyph"><i class="fa-solid fa-gamepad"></i></div>
+          <span class="dock-label">SNAKE</span>
+        </div>
+        <div class="dock-icon" data-app="ls">
+          <div class="dock-glyph"><i class="fa-solid fa-folder-open"></i></div>
+          <span class="dock-label">FILES</span>
+        </div>
+        <div class="dock-icon" data-app="about">
+          <div class="dock-glyph"><i class="fa-solid fa-satellite-dish"></i></div>
+          <span class="dock-label">ABOUT</span>
+        </div>
+        <div class="dock-icon" data-app="neofetch">
+          <div class="dock-glyph"><i class="fa-solid fa-microchip"></i></div>
+          <span class="dock-label">FETCH</span>
+        </div>
+        <div class="dock-icon" data-app="matrix">
+          <div class="dock-glyph"><i class="fa-solid fa-code"></i></div>
+          <span class="dock-label">MATRIX</span>
+        </div>
+        <div class="dock-icon" data-app="hack">
+          <div class="dock-glyph"><i class="fa-solid fa-skull-crossbones"></i></div>
+          <span class="dock-label">HACK</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Terminal bar (bottom) -->
+    <div id="terminal-bar">
+      <div id="terminal-output"></div>
+      <div id="terminal-input-row">
+        <span class="prompt-seg prompt-seg-user">operative</span>
+        <span class="prompt-seg prompt-seg-path">~/hexos</span>
+        <span class="prompt-arrow">❯</span>
+        <input id="terminal-input" type="text" autocomplete="off" spellcheck="false" autofocus />
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module" src="main.js"></script>
+
+
+</body>
+</html>
